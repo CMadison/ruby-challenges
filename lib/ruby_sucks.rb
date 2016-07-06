@@ -31,16 +31,18 @@
 
 # Challenge 2 - Reverese A String
 
-# puts  'Enter a string:'
-# reverse = gets.chomp.strip
+puts  'Enter a string:'
+reverse = gets.chomp.strip
 
-# arr = reverse.chars
+arr = reverse.chars
 # char_count = reverse.chars.count
 
-# for i in (0...2)
-#   arr[i], arr[arr.length-1-i] = arr[arr.length-1-i], arr[i]
-#   puts arr
-# end
+for i in (0..(arr.length-1)/2)
+  arr[arr.length-1-i], arr[i] = arr[i], arr[arr.length-1-i]
+end
+
+puts arr.inspect
+
 
 # Challenge 3 - Bank Transactions
 # Create a prompt that asks the user if they would like to display their
@@ -70,21 +72,21 @@
 
 # puts "Your current balance is '#{balance}'"
 
-number = rand(1..100)
+# number = rand(1..100)
 
-puts'Guess a number between 1 and 100'
-guess = gets.chomp.strip
+# puts'Guess a number between 1 and 100'
+# guess = gets.chomp.strip
 
-until guess.to_i == number
+# until guess.to_i == number
 
-  if guess.to_i > number
-    puts "Your guess is too high, please guess again"
+#   if guess.to_i > number
+#     puts "Your guess is too high, please guess again"
 
-  elsif guess.to_i < number
-    puts "Your guess is too low, please guess again"
+#   elsif guess.to_i < number
+#     puts "Your guess is too low, please guess again"
 
-  end
-  guess = gets.chomp.strip
-end
-guess=-1
-put "You are correct, the number was '#{balance}'!"
+#   end
+#   guess = gets.chomp.strip
+# end
+# guess=-1
+# put "You are correct, the number was '#{balance}'!"
